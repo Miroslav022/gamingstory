@@ -222,11 +222,11 @@ header .nav .links ul li a.active::after {
 }
 .best-seller-ct .bst-container .b-seller {
   padding: 30px;
-  border-radius: 10px;
   width: 700px;
   height: 450px;
   justify-content: space-around;
   display: flex;
+  align-items: center;
   background: rgb(151, 71, 255);
   background: linear-gradient(90deg, rgb(151, 71, 255) 0%, rgb(175, 128, 255) 100%);
 }
@@ -509,6 +509,15 @@ footer .allRights {
     font-size: 18px;
   }
 }
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 300px;
+  height: 300px;
+}
+
 @media screen and (max-width: 950px) {
   .container-index .features-section .feature-ct {
     display: grid;
