@@ -589,6 +589,20 @@ footer .allRights {
     display: none;
   }
 }
+@media screen and (max-width: 525px) {
+  .best-seller-ct .bst-container .b-seller {
+    flex-direction: column;
+    justify-content: start;
+    height: 750px;
+  }
+  .best-seller-ct .bst-container .b-seller .bs-content .down {
+    position: absolute;
+    bottom: 25px;
+  }
+  .best-seller-ct .bst-container .b-seller .bs-img img {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 425px) {
   .header .opacity .heder-heading h1 {
     font-size: 43px;
