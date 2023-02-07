@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "naziv": "Syn Buds Air",
+    "cena": {
+      "stara cena": false,
+      "aktuelna cena": 139.99
+    },
+    "Karakteristike": [
+      "Stellar Wireless Bluetooth®",
+      "Precision-tuned 6mm driver units",
+      "60ms low-latency mode for gaming"
+    ],
+    "Free shipping": true,
+    "idCategory": 9,
+    "discount": false
+  },
+  {
+    "id": 2,
+    "naziv": "Vulcan TKL",
+    "cena": {
+      "stara cena": false,
+      "aktuelna cena": 179.99
+    },
+    "Karakteristike": [
+      "Titan Switch Optical (1.4mm actuation, linear)",
+      "50 million keystroke life-cycle",
+      "Compact TKL form factor"
+    ],
+    "Free shipping": false,
+    "idCategory": 2,
+    "discount": false
+  },
+  {
+    "id": 3,
+    "naziv": "Razer Wireless Controller",
+    "cena": {
+      "stara cena": false,
+      "aktuelna cena": 199.99
+    },
+    "Karakteristike": [
+      "Wireless connection",
+      "Bluetooth for xCloud Gaming, Android, iOS",
+      "Seamless capture and share content "
+    ],
+    "Free shipping": true,
+    "idCategory": 4,
+    "discount": false
+  },
+  {
+    "id": 4,
+    "naziv": "Razer Enki Pro",
+    "cena": {
+      "stara cena": 1299.99,
+      "aktuelna cena": 1234.99
+    },
+    "Karakteristike": [
+      "Upholstered with Alcantara",
+      "Designed for All-day Comfort",
+      "Built-in Lumbar Arch"
+    ],
+    "Free shipping": false,
+    "idCategory": 7,
+    "discount": true
+  },
+  {
+    "id": 5,
+    "naziv": "Razer Kiyo Pro Ultra",
+    "cena": {
+      "stara cena": 299.99,
+      "aktuelna cena": 349.99
+    },
+    "Karakteristike": [
+      "DSLR-like 4K Quality",
+      "Incredible Clarity in Any Light",
+      "AI-powered Video Imaging"
+    ],
+    "Free shipping": false,
+    "idCategory": 5,
+    "discount": true
+  },
+  {
+    "id": 6,
+    "naziv": "Razer Edge Wi-Fi",
+    "cena": {
+      "stara cena": false,
+      "aktuelna cena": 399.99
+    },
+    "Karakteristike": [
+      "Snapdragon® G3X Gen 1",
+      "Console-class Control with HyperSense",
+      "6.8” 144Hz AMOLED™ FHD+ Touchscreen"
+    ],
+    "Free shipping": true,
+    "idCategory": 8,
+    "discount": false
+  },
+  {
+    "id": 7,
+    "naziv": "FLOW",
+    "cena": {
+      "stara cena": false,
+      "aktuelna cena": 119.99
+    },
+    "Karakteristike": [
+      "5 W (RMS) Power",
+      "In-line controles",
+      "RGB illumination"
+    ],
+    "Free shipping": false,
+    "idCategory": 6,
+    "discount": false
+  },
+  {
+    "id": 8,
+    "naziv": "Wirless speaker",
+    "cena": {
+      "stara cena": 76.99,
+      "aktuelna cena": 112.99
+    },
+    "Karakteristike": [
+      "TWS function - True Wireless Stereo",
+      "10 W RMS",
+      "Bluetooth 5.0"
+    ],
+    "Free shipping": false,
+    "idCategory": 6,
+    "discount": true
+  },
+  {
+    "id": 9,
+    "naziv": "WOLF",
+    "cena": {
+      "stara cena": false,
+      "aktuelna cena": 69.99
+    },
+    "Karakteristike": [
+      "High-precision 50 mm speakers",
+      "Frequency range: 20Hz - 20kHz",
+      "Interface: USB 2.0"
+    ],
+    "Free shipping": false,
+    "idCategory": 3,
+    "discount": false
+  }
+]
