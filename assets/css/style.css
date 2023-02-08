@@ -412,15 +412,16 @@ header .nav .links ul li a.active::after {
 }
 .recension-section .recension {
   display: flex;
-  width: -moz-max-content;
-  width: max-content;
-  overflow: hidden;
+  grid-gap: 1rem;
+  width: 100%;
+  transition: 0.5s;
 }
 .recension-section .recension .rc-block {
-  margin-right: 50px;
   background-color: #2a2a2d;
-  padding: 55px;
-  width: 33.3333333333%;
+  min-width: calc(33.33% - 0.5rem);
+  padding: 40px 20px;
+  font-size: 2rem;
+  scroll-snap-align: start;
 }
 .recension-section .recension .rc-block .upper-rc {
   display: flex;
@@ -429,18 +430,18 @@ header .nav .links ul li a.active::after {
 }
 .recension-section .recension .rc-block .upper-rc .img-rc {
   background: #212123;
-  width: 77px;
-  height: 77px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
 }
 .recension-section .recension .rc-block .upper-rc span {
   margin-left: 22px;
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
 }
 .recension-section .recension .rc-block .down-rc p {
   color: #a1aeb7;
-  font-size: 20px;
+  font-size: 16px;
   max-width: 448px;
 }
 .recension-section .moving {
@@ -626,6 +627,9 @@ footer .allRights {
   footer .container-index .ft-ct .col p {
     margin-bottom: 20px;
   }
+  .recension-section .recension .rc-block {
+    min-width: calc(50% - 0.5rem);
+  }
 }
 @media screen and (max-width: 768px) {
   .header .opacity .heder-heading h1 {
@@ -654,16 +658,6 @@ footer .allRights {
   .recension-section {
     padding-left: 20px;
   }
-  .recension-section .recension .rc-block {
-    padding: 40px;
-    width: 400px;
-  }
-  .recension-section .recension .rc-block .upper-rc span {
-    font-size: 20px;
-  }
-  .recension-section .recension .rc-block .down-rc p {
-    font-size: 16px;
-  }
   .recension-section .moving {
     padding-right: 20px;
   }
@@ -677,6 +671,9 @@ footer .allRights {
   }
   header .nav .links {
     display: none;
+  }
+  .recension-section .recension .rc-block {
+    min-width: calc(100% - 0.5rem);
   }
 }
 @media screen and (max-width: 525px) {

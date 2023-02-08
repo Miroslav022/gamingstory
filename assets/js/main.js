@@ -4,12 +4,29 @@ let navSmall = document.querySelector('#navSmall');
 let header = document.querySelector('header');
 
 let headerSection = document.querySelector('.header');
+let recension = document.querySelector('.recension');
+let rcBlock = document.querySelectorAll('.rc-block');
+
+
+let moveRight = document.querySelector('.block-right'); 
+let moveLeft = document.querySelector('.block-left');
+
+
 window.addEventListener('load', function(){
   //Navigacija
   let navAjax = fetch("assets/json/navigation.json").then(response => response.json()).then(data=>{
     ispisNavigacije(data)
   })
 
+  //Sticky navigation (Intersection API)
+  function stickyNav(entries){
+    const [entry] = entries;
+    if(!entry.isIntersecting) {
+      header.classList.add('sticky')
+    } else header.classList.remove('sticky')
+  }
+  let headerObserver = new IntersectionObserver(stickyNav, {root: null, threshold:0});
+  headerObserver.observe(headerSection)
 
   //Hamburger menu
   let hamburger = document.querySelector(".menu-btn");
@@ -49,20 +66,34 @@ window.addEventListener('load', function(){
     },
   });
 
+  let block=0;
+  let slider = 0
+  let size = rcBlock[0].getBoundingClientRect().width
+  //Recension movement
+  moveRight.addEventListener('click', function(e){
+    e.preventDefault()
+    console.log(size);
+    if(slider<rcBlock.length-1)  {
+    block+=size+16
+    sliderMovement(block)
+    slider++
+    }
+  })
 
+  moveLeft.addEventListener('click', function(e){
+    e.preventDefault()
+    if(slider!=0)  {
+    block-=size+16
+    sliderMovement(block)
+    slider--
+    } else slider=0;
+  })
 
-
-
-
-  //Sticky navigation (Intersection API)
-  function stickyNav(entries){
-    const [entry] = entries;
-    if(!entry.isIntersecting) {
-      header.classList.add('sticky')
-    } else header.classList.remove('sticky')
+  function sliderMovement(block) {
+    recension.style.transform=`translateX(-${block}px)`
   }
-  let headerObserver = new IntersectionObserver(stickyNav, {root: null, threshold:0});
-  headerObserver.observe(headerSection)
+  
+  
 
   //Funkcije
   function ispisNavigacije(navigacija) {

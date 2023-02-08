@@ -451,35 +451,37 @@ header {
   overflow: hidden;
   .recension {
     display: flex;
-    width: max-content;
-    overflow: hidden;
+    grid-gap: 1rem;
+    width: 100%;
+    transition: 0.5s;
+   
     
     .rc-block {
-      margin-right: 50px;
       background-color: #2a2a2d;
-      padding: 55px;
-      width: calc(100% / 3);
-
+      min-width: calc(33.33% - .5rem);
+      padding: 40px 20px;
+      font-size: 2rem;
+      scroll-snap-align: start;
       .upper-rc {
         display: flex;
         align-items: center;
         margin-bottom: 35px;
         .img-rc {
           background: #212123;
-          width: 77px;
-          height: 77px;
+          width: 55px;
+          height: 55px;
           border-radius: 50%;
         }
         span {
           margin-left: 22px;
-          font-size: 25px;
+          font-size: 20px;
           color: #fff;
         }
       }
       .down-rc {
         p {
           color: #a1aeb7;
-          font-size: 20px;
+          font-size: 16px;
           max-width: 448px;
         }
       }
@@ -725,6 +727,7 @@ footer {
       }
     }
   }
+  
 
   footer {
     .container-index {
@@ -736,6 +739,14 @@ footer {
             margin-bottom: 20px;
           }
         }
+      }
+    }
+  }
+
+  .recension-section {
+    .recension {
+      .rc-block {
+        min-width: calc(50% - 0.5rem);
       }
     }
   }
@@ -778,22 +789,7 @@ footer {
   }
   .recension-section {
     padding-left: 20px;
-    .recension {
-      .rc-block {
-        padding: 40px;
-        width: 400px;
-        .upper-rc {
-          span {
-            font-size: 20px;
-          }
-        }
-        .down-rc {
-          p {
-            font-size: 16px;
-          }
-        }
-      }
-    }
+    
     .moving {
       padding-right: 20px;
     }
@@ -815,6 +811,14 @@ footer {
       }
       .links {
         display: none;
+      }
+    }
+  }
+
+  .recension-section {
+    .recension {
+      .rc-block {
+        min-width: calc(100% - 0.5rem);
       }
     }
   }
