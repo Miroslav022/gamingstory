@@ -34,5 +34,21 @@
   {
     "id": 9,
     "naziv": "Earphones"
+  },
+  {
+    "id": 10,
+    "naziv": "backpack"
+  },
+  {
+    "id": 11,
+    "naziv": "Mousepas"
+  },
+  {
+    "id": 12,
+    "naziv": "Headphone stand"
+  },
+  {
+    "id": 13,
+    "naziv": "Coler"
   }
 ]
