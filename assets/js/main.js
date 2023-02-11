@@ -293,7 +293,9 @@ window.addEventListener("load", function () {
       let atCart = document.querySelectorAll(".icon");
       atCart.forEach((el) => {
         el.addEventListener("click", (e) => {
+          console.log(e);
           addToCart(e);
+
         });
       });
     }
@@ -304,7 +306,9 @@ window.addEventListener("load", function () {
       let productId = product.getAttribute("id");
       let proizvodi = lsGet("proizvodi");
       let choocenProduct = proizvodi.find((x) => x.id == productId);
+      
       korpa.push(choocenProduct);
+      console.log(korpa)
       lsSave("korpa", korpa);
       updateCart();
     }
