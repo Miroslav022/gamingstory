@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="side-bar side-bar-none">
+      <!--Side menu header-->
       <div class="pre-block">
         <h1>Logo</h1>
         <div class="close-btn none">
@@ -43,34 +44,55 @@
           </svg>
         </div>
       </div>
+      <!--Filteri-->
       <div class="filters">
         <form action="main.php">
+          <!--Category-->
           <div class="category">
             <p class="cat-p">Category</p>
           </div>
+          <!--Brend-->
           <div class="brand">
             <p class="cat-p">Brand</p>
           </div>
+          <!--Discount-->
           <div class="discount">
             <p class="cat-p">Discount</p>
             <div class="filter-block">
-              <input type="checkbox" name="discount" id="discountElement" />
+              <input
+                type="checkbox"
+                name="discount"
+                id="discountElement"
+                value="discount"
+              />
               <label for="discount">Discount</label>
             </div>
+          </div>
+          <!--Shipping-->
+          <div class="Free shipping">
+            <p class="cat-p">Free shipping</p>
             <div class="filter-block">
-              <input type="checkbox" name="regular" id="regular" />
-              <label for="regular">Regular</label>
+              <input
+                type="checkbox"
+                name="fs"
+                id="shippingCb"
+                value="shippingCb"
+              />
+              <label for="discount">Free shipping</label>
             </div>
           </div>
+          <!--Price range-->
           <div class="priceRange">
             <p class="cat-p">Price</p>
-            <input type="range" name="range" id="range" min="0" max="99999" />
+            <input type="range" name="range" id="range" min="0" max="1234.99" />
             <div class="pr">
-              <label for="range">0$</label><label for="range">99999$</label>
+              <label for="range">0$</label
+              ><label for="range" id="max">1235$</label>
             </div>
           </div>
         </form>
       </div>
+      <!--Side menu footer-->
       <div class="post-block"><p>Thank you</p></div>
     </div>
     <div class="content">
@@ -110,11 +132,11 @@
       </div>
       <div class="down-content">
         <div class="sort-search">
-          <form action="main.php">
+          <form action="main.php" id="forma">
             <div class="sort">
               <label for="sortElement">Sort by</label>
               <select name="sortElement" id="sortElement">
-                <option value="choose">Choose</option>
+                <option value="0">Choose</option>
               </select>
             </div>
             <div class="search">
