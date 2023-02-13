@@ -1,5 +1,11 @@
 let korpa = lsGet("korpa") == null ? [] : lsGet("korpa");
 
+let cekiraniCat = [];
+let cekiraniBrand = [];
+let cekiraniDiscount = [];
+let cekiraniShipping = [];
+let proizvodiPoCeni = [];
+
 //Elementi
 let navLarge = document.querySelector("#navLarge");
 let navSmall = document.querySelector("#navSmall");
@@ -20,7 +26,11 @@ let moveLeft = document.querySelector(".block-left");
 let filterBtn = document.querySelector(".filter-icon-block");
 let closeFilter = document.querySelector(".close-btn");
 
+let discountCb = document.querySelector("#discountElement");
+let freeShippCb = document.querySelector("#shippingCb");
 let search = document.querySelector("#searchElement");
+let range = document.querySelector("#range");
+let sort = document.querySelector("#sortElement");
 
 //add to cart funkcija
 function addToCart(el) {
@@ -230,6 +240,9 @@ window.addEventListener("load", function () {
       ispisProizvoda(data);
       lsSave("proizvodi", data);
     });
+    ajaxCallBack("sortiranje.json", function (data) {
+      ispisElemenataSortiranja(data);
+    });
     //Open side menu
     filterBtn.addEventListener("click", function (e) {
       e.preventDefault();
@@ -250,10 +263,56 @@ window.addEventListener("load", function () {
       );
       ispisProizvoda(searchedProducts);
     });
+    this.document.querySelector("#forma").addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
 
-    //Functions
-    let cekiraniCat = [];
-    let cekiraniBrand = [];
+    //Discount option
+    discountCb.addEventListener("change", (e) => {
+      if (e.target.checked) {
+        ShippDiscount("discount", cekiraniDiscount);
+      } else cekiraniDiscount = [];
+      konacniProizvodi();
+    });
+
+    //Free shipping
+    freeShippCb.addEventListener("change", (e) => {
+      if (e.target.checked) {
+        ShippDiscount("FreeShipping", cekiraniShipping);
+      } else cekiraniShipping = [];
+      konacniProizvodi();
+    });
+
+    //Range price
+    range.addEventListener("change", (e) => {
+      proizvodiPoCeni = [];
+      let cena = e.target.value;
+      proizvodi.forEach((proizvod) => {
+        if (proizvod.cena.aktuelnaCena < cena) {
+          proizvodiPoCeni.push(proizvod.id);
+        }
+      });
+      this.document.querySelector("#max").innerHTML = `${cena}$`;
+      console.log(proizvodiPoCeni);
+      konacniProizvodi();
+    });
+
+    // Sortiranje
+    sort.addEventListener("change", konacniProizvodi);
+
+    //Function
+    function ispisElemenataSortiranja(elementi) {
+      elementi.forEach((e) => {
+        sort.innerHTML += `<option value="${e.vrednost}">${e.naziv}</option>`;
+      });
+    }
+
+    function ShippDiscount(type, array) {
+      proizvodi.forEach((proizvod) => {
+        if (proizvod[type]) array.push(proizvod.id);
+      });
+    }
+
     function ispisFiltera(data, block, tip) {
       for (let d of data) {
         block.innerHTML += `
@@ -275,9 +334,9 @@ window.addEventListener("load", function () {
             } else {
               cekiraniCat = cekiraniCat.filter((x) => x != id);
             }
+            konacniProizvodi();
 
             // let zaIspis = FiltriranjeProizvoda(proizvodi, "kat", cekiraniCat);
-            konacniProizvodi();
             // ispisProizvoda(zaIspis);
             // let zaIspis = [];
             // cekirani.forEach((id) => {
@@ -315,12 +374,13 @@ window.addEventListener("load", function () {
     }
 
     function konacniProizvodi() {
-      console.log(cekiraniCat);
-      console.log(cekiraniBrand);
       let proizvodi = lsGet("proizvodi");
       proizvodi = FiltriranjeProizvoda(proizvodi, "kat", cekiraniCat);
       proizvodi = FiltriranjeProizvoda(proizvodi, "brand", cekiraniBrand);
-      console.log(proizvodi);
+      proizvodi = FiltriranjeProizvoda(proizvodi, "discount", cekiraniDiscount);
+      proizvodi = FiltriranjeProizvoda(proizvodi, "shipping", cekiraniShipping);
+      proizvodi = FiltriranjeProizvoda(proizvodi, "range", proizvodiPoCeni);
+      proizvodi = sortiranjeProizvoda(proizvodi);
       ispisProizvoda(proizvodi);
     }
 
@@ -332,8 +392,15 @@ window.addEventListener("load", function () {
       }
       if (tip == "brand") {
         property = "idBrand";
-        console.log(property);
       }
+      if (tip == "discount" || tip == "shipping" || tip == "range") {
+        nizId.forEach((id) => {
+          proizvodi.forEach((proizvod) => {
+            proizvod.id == id ? filtiraniPorizvodi.push(proizvod) : "";
+          });
+        });
+      }
+
       if (nizId.length == 0) {
         filtiraniPorizvodi = proizvodi;
       } else {
@@ -349,19 +416,43 @@ window.addEventListener("load", function () {
           });
         });
       }
-
-      // nizId.forEach((id) => {
-      //   proizvodi.forEach((proizvod) => {
-      //     if (!Array.isArray(proizvod.idCategory)) {
-      //       proizvod.idCategory == id ? filtiraniPorizvodi.push(proizvod) : "";
-      //     } else {
-      //       proizvod.idCategory.forEach((nizKat) => {
-      //         nizKat == id ? filtiraniPorizvodi.push(proizvod) : "";
-      //       });
-      //     }
-      //   });
-      // });
       return filtiraniPorizvodi;
+    }
+
+    function sortiranjeProizvoda(nizProizvoda) {
+      let sortiraniProizvodi = [];
+      let izabrano = sort.value;
+      if (izabrano == 0) {
+        sortiraniProizvodi = nizProizvoda;
+      } else {
+        sortiraniProizvodi = nizProizvoda.sort(function (a, b) {
+          if (izabrano == "cena-rastuce") {
+            return a.cena.aktuelnaCena - b.cena.aktuelnaCena;
+          }
+          if (izabrano == "cena-opadajuce") {
+            return b.cena.aktuelnaCena - a.cena.aktuelnaCena;
+          }
+          if (izabrano == "naziv-rastuce") {
+            if (a.naziv < b.naziv) {
+              return -1;
+            } else if (a.naziv > b.naziv) {
+              return 1;
+            } else {
+              return 0;
+            }
+          }
+          if (izabrano == "naziv-opadajuce") {
+            if (a.naziv > b.naziv) {
+              return -1;
+            } else if (a.naziv < b.naziv) {
+              return 1;
+            } else {
+              return 0;
+            }
+          }
+        });
+      }
+      return sortiraniProizvodi;
     }
 
     function ispisProizvoda(proizvodi) {
