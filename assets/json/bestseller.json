@@ -1,0 +1,44 @@
+[
+  {
+    "id": 3,
+    "naziv": "Razer Wireless Controller",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 199.99
+    },
+    "Karakteristike": [
+      "Wireless connection",
+      "Bluetooth for xCloud Gaming, Android, iOS",
+      "Seamless capture and share content "
+    ],
+    "FreeShipping": true,
+    "idBrand": 2,
+    "idCategory": 4,
+    "discount": false,
+    "img": {
+      "alt": "Razer Wireless Controller",
+      "src": "assets/img/razerJoystick.png"
+    }
+  },
+  {
+    "id": 15,
+    "naziv": "Redragon K585 One-handed",
+    "cena": {
+      "staraCena": 222.99,
+      "aktuelnaCena": 160.99
+    },
+    "Karakteristike": [
+      "5-zone, 10-LED 16,8m color RGBA backlighting",
+      "Semi-transparent top plate",
+      "Solid and responsive typing with silent membrane keys"
+    ],
+    "FreeShipping": false,
+    "idBrand": 5,
+    "idCategory": [1, 2],
+    "discount": true,
+    "img": {
+      "alt": "Redragon K585 One-handed",
+      "src": "assets/img/combo3.webp"
+    }
+  }
+]
