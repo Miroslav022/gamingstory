@@ -1,0 +1,18 @@
+[
+  {
+    "vrednost": "naziv-rastuce",
+    "naziv": "Nazivu proizvoda A-Z"
+  },
+  {
+    "vrednost": "naziv-opadajuce",
+    "naziv": "Nazivu proizvoda Z-A"
+  },
+  {
+    "vrednost": "cena-rastuce",
+    "naziv": "Ceni rastuće"
+  },
+  {
+    "vrednost": "cena-opadajuce",
+    "naziv": "Ceni opadajuće"
+  }
+]
