@@ -202,7 +202,7 @@ header .nav .links ul li a.active::after {
   height: 100%;
   text-align: center;
   padding: 20px;
-  z-index: 996;
+  z-index: 999;
 }
 .side-menu ul li {
   list-style: none;
