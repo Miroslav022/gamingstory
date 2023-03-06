@@ -135,6 +135,10 @@ function lsGet(name) {
   return JSON.parse(localStorage.getItem(name));
 }
 
+ajaxCallBack("kategorije.json", function (data) {
+  lsSave("kategorije", data);
+});
+
 function getNavigation() {
   //Navigacija
   let navAjax = fetch("assets/json/navigation.json")
@@ -955,9 +959,7 @@ window.addEventListener("load", function () {
         });
       });
     }
-    ajaxCallBack("kategorije.json", function (data) {
-      lsSave("kategorije", data);
-    });
+
     //Ispis kategorije
     function category(id) {
       let categories = lsGet("kategorije");
