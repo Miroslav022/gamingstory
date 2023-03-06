@@ -160,7 +160,7 @@ function ispisNavigacije(navigacija) {
         window.location.pathname.includes("index.html")
           ? "#goToHeader"
           : x.href
-      }" class="nav-hover ${x.href == SiteLocation ? "active" : ""}">${
+      }" class="nav-hover ${x.href == "index.html" ? "active" : ""}">${
         x.name
       }</a><div class="unactive"></div></li>`
     );
