@@ -417,6 +417,7 @@ window.addEventListener("load", function () {
     let proizvodi = lsGet("proizvodi");
     //Ajax
     ajaxCallBack("kategorije.json", function (data) {
+      lsSave("categories", data);
       ispisFiltera(data, categoryBlock, "kategorijeCt");
     });
 
@@ -699,9 +700,7 @@ window.addEventListener("load", function () {
 
     updateCart();
   } else if (window.location.pathname.includes("payment.html")) {
-    ajaxCallBack("kategorije.json", function (data) {
-      lsSave("kategorije", data);
-    });
+    let categories = lsGet("categories");
     //Hamburger menu
     let hamburger = document.querySelector(".menu-btn");
     let sideMenu = document.querySelector(".side-menu");
@@ -961,11 +960,9 @@ window.addEventListener("load", function () {
 
     //Ispis kategorije
     function category(id) {
-      let categories = lsGet("kategorije");
-      console.log(categories);
-      for (let category of categories) {
-        console.log(category);
-        if (category.id == id) return category.naziv;
+      for (let i = 0; i < categories.length; i++) {
+        console.log(categories[i]);
+        if (categories[i].id == id) return categories[i].naziv;
       }
     }
 
