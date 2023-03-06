@@ -1017,11 +1017,12 @@ window.addEventListener("load", function () {
         quantity = parseInt(quantity);
         let productPrice = proizvod.querySelector(".price").innerHTML;
         productPrice = productPrice.substring(0, productPrice.length - 1);
-        productPrice = Number(productPrice);
+        productPrice = Number(productPrice).toFixed(2);
         sum += productPrice * quantity;
+
         shipping != "Free shipping" && quantity > 0 ? (sum += 5) : "";
       });
-      subTotalBlock.innerHTML = `${sum}$`;
+      subTotalBlock.innerHTML = `${sum.toFixed(2)}$`;
     }
     subTotal();
   }
