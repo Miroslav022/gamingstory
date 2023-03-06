@@ -5,6 +5,7 @@ let cekiraniBrand = [];
 let cekiraniDiscount = [];
 let cekiraniShipping = [];
 let proizvodiPoCeni = [];
+let selectedProduct = [];
 
 //Elementi
 let navLarge = document.querySelector("#navLarge");
@@ -48,10 +49,10 @@ function addToCart(el) {
   let product = el.target.closest(".product");
   let productId = product.getAttribute("id");
   let proizvodi = lsGet("proizvodi");
-  let choocenProduct = proizvodi.find((x) => x.id == productId);
+  selectedProduct = proizvodi.find((x) => x.id == productId);
   korpa.forEach((prod) => {
-    if (prod.id == choocenProduct.id) {
-      korpa = korpa.filter((x) => x.id != choocenProduct.id);
+    if (prod.id == selectedProduct.id) {
+      korpa = korpa.filter((x) => x.id != selectedProduct.id);
       messageBox.innerHTML = `<p>You already have this product in cart!</p>`;
       messageBox.classList.remove("hidden");
       setTimeout(function () {
@@ -61,7 +62,7 @@ function addToCart(el) {
     }
   });
 
-  korpa.push(choocenProduct);
+  korpa.push(selectedProduct);
   lsSave("korpa", korpa);
   updateCart();
 }
@@ -71,10 +72,10 @@ function atcHome(el) {
   let product = el.target.closest(".b-seller");
   let productId = product.getAttribute("id");
   let proizvodi = lsGet("proizvodi");
-  let choocenProduct = proizvodi.find((x) => x.id == productId);
+  let selectedProduct = proizvodi.find((x) => x.id == productId);
   korpa.forEach((prod) => {
-    if (prod.id == choocenProduct.id) {
-      korpa = korpa.filter((x) => x.id != choocenProduct.id);
+    if (prod.id == selectedProduct.id) {
+      korpa = korpa.filter((x) => x.id != selectedProduct.id);
       messageBox.innerHTML = `<p>You already have this product in cart!</p>`;
       messageBox.classList.remove("hidden");
       setTimeout(function () {
@@ -83,7 +84,7 @@ function atcHome(el) {
       console.log("vec imas ovo");
     }
   });
-  korpa.push(choocenProduct);
+  korpa.push(selectedProduct);
   lsSave("korpa", korpa);
   updateCart();
 }
@@ -724,8 +725,7 @@ window.addEventListener("load", function () {
     updateCart();
 
     //Show all products
-    let allprod = lsGet("korpa");
-    ispisProizvodaIzKorpe(allprod);
+    ispisProizvodaIzKorpe(korpa);
 
     //DDL for expiry date
 
@@ -836,6 +836,8 @@ window.addEventListener("load", function () {
       validateBox("#terms", "Please accept Terms of Use & Privacy Policy");
       console.log(brojGresaka);
       if (brojGresaka == 0) {
+        localStorage.removeItem("korpa");
+        productCt.innerHTML = "";
         messageBox.innerHTML = `<p>Successful purchase!</p>`;
         messageBox.classList.remove("hidden");
         setTimeout(function () {
