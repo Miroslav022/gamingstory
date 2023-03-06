@@ -159,7 +159,7 @@ function ispisNavigacije(navigacija) {
         window.location.pathname.includes("index.html")
           ? "#goToHeader"
           : x.href
-      }" class="nav-hover ${x.href == 'index.html' ? "active" : ""}">${
+      }" class="nav-hover ${x.href == SiteLocation ? "active" : ""}">${
         x.name
       }</a><div class="unactive"></div></li>`
     );
@@ -476,6 +476,8 @@ window.addEventListener("load", function () {
     range.addEventListener("change", (e) => {
       proizvodiPoCeni = [];
       let cena = e.target.value;
+      cena = parseFloat(cena);
+      console.log(cena);
       proizvodi.forEach((proizvod) => {
         if (proizvod.cena.aktuelnaCena <= cena) {
           proizvodiPoCeni.push(proizvod.id);
@@ -483,7 +485,9 @@ window.addEventListener("load", function () {
       });
       this.document.querySelector("#max").innerHTML = `${cena}$`;
       if (proizvodiPoCeni.length == 0) {
+        console.log(proizvodiPoCeni);
         productsBlock.innerHTML = `<p class='productMessage'>Sorry, we currently do not have this product.</p>`;
+        return;
       }
       konacniProizvodi();
     });
@@ -567,9 +571,6 @@ window.addEventListener("load", function () {
       }
       if (tip == "brand") {
         property = "idBrand";
-      }
-      if (tip == "range" && nizId.length == 0) {
-        return (filtiraniPorizvodi = []);
       }
       if (tip == "discount" || tip == "shipping" || tip == "range") {
         nizId.forEach((id) => {
