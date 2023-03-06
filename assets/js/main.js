@@ -135,10 +135,6 @@ function lsGet(name) {
   return JSON.parse(localStorage.getItem(name));
 }
 
-ajaxCallBack("kategorije.json", function (data) {
-  lsSave("kategorije", data);
-});
-
 function getNavigation() {
   //Navigacija
   let navAjax = fetch("assets/json/navigation.json")
@@ -703,6 +699,9 @@ window.addEventListener("load", function () {
 
     updateCart();
   } else if (window.location.pathname.includes("payment.html")) {
+    ajaxCallBack("kategorije.json", function (data) {
+      lsSave("kategorije", data);
+    });
     //Hamburger menu
     let hamburger = document.querySelector(".menu-btn");
     let sideMenu = document.querySelector(".side-menu");
@@ -963,7 +962,9 @@ window.addEventListener("load", function () {
     //Ispis kategorije
     function category(id) {
       let categories = lsGet("kategorije");
+      console.log(categories);
       for (let category of categories) {
+        console.log(category);
         if (category.id == id) return category.naziv;
       }
     }
