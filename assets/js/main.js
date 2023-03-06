@@ -153,6 +153,7 @@ function ispisNavigacije(navigacija) {
   let SiteLocation = window.location.pathname;
   SiteLocation = SiteLocation.substring(1);
   for (let x of navigacija) {
+    console.log(x.href);
     navLarge.insertAdjacentHTML(
       "afterbegin",
       `<li><a href="${
