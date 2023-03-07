@@ -81,22 +81,6 @@ function addToCart(el) {
   function productExistsInCart() {
     return productsFromCart.filter((prod) => prod.id == productId).length;
   }
-
-  // selectedProduct = proizvodi.find((x) => x.id == productId);
-  // korpa.forEach((prod) => {
-  //   if (prod.id == selectedProduct.id) {
-  //     korpa = korpa.filter((x) => x.id != selectedProduct.id);
-  //     messageBox.innerHTML = `<p>You already have this product in cart!</p>`;
-  //     messageBox.classList.remove("hidden");
-  //     setTimeout(function () {
-  //       messageBox.classList.add("hidden");
-  //     }, 3000);
-  //     console.log("vec imas ovo");
-  //   }
-  // });
-
-  // korpa.push(selectedProduct);
-  // lsSave("korpa", korpa);
   updateCart();
 }
 
@@ -212,14 +196,20 @@ function ispisNavigacije(navigacija) {
         window.location.pathname.includes("index.html")
           ? "#goToHeader"
           : x.href
-      }" class="nav-hover ${x.href == "index.html" ? "active" : ""}">${
-        x.name
-      }</a><div class="unactive"></div></li>`
+      }" class="nav-hover ${
+        x.href == "index.html" &&
+        window.location.pathname.includes("index.html")
+          ? "active"
+          : ""
+      }">${x.name}</a><div class="unactive"></div></li>`
     );
     let nav_hover = document.querySelectorAll(".nav-hover");
     nav_hover.forEach((nav) => {
       nav.addEventListener("mouseover", function (e) {
-        if (e.target.textContent == "Home") {
+        if (
+          e.target.textContent == "Home" &&
+          window.location.pathname.includes("index.html")
+        ) {
           return;
         } else {
           let hoverel = e.target.nextElementSibling;
