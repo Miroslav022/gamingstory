@@ -1,0 +1,519 @@
+[
+  {
+    "id": 1,
+    "naziv": "Syn Buds Air",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 139.99
+    },
+    "Karakteristike": [
+      "Stellar Wireless Bluetooth®",
+      "Precision-tuned 6mm driver units",
+      "60ms low-latency mode for gaming"
+    ],
+    "FreeShipping": true,
+    "idBrand": 1,
+    "idCategory": 9,
+    "discount": false,
+    "img": {
+      "alt": "Syn Buds Air",
+      "src": "assets/img/earphones.png"
+    }
+  },
+  {
+    "id": 2,
+    "naziv": "Vulcan TKL",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 179.99
+    },
+    "Karakteristike": [
+      "Titan Switch Optical (1.4mm actuation, linear)",
+      "50 million keystroke life-cycle",
+      "Compact TKL form factor"
+    ],
+    "FreeShipping": false,
+    "idBrand": 1,
+    "idCategory": 2,
+    "discount": false,
+    "img": {
+      "alt": "Vulcan TKL",
+      "src": "assets/img/Vulcan.png"
+    }
+  },
+  {
+    "id": 3,
+    "naziv": "Razer Wireless Controller",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 199.99
+    },
+    "Karakteristike": [
+      "Wireless connection",
+      "Bluetooth for xCloud Gaming, Android, iOS",
+      "Seamless capture and share content "
+    ],
+    "FreeShipping": true,
+    "idBrand": 2,
+    "idCategory": 4,
+    "discount": false,
+    "img": {
+      "alt": "Razer Wireless Controller",
+      "src": "assets/img/razerJoystick.png"
+    }
+  },
+  {
+    "id": 4,
+    "naziv": "Razer Enki Pro",
+    "cena": {
+      "staraCena": 1299.99,
+      "aktuelnaCena": 1234.99
+    },
+    "Karakteristike": [
+      "Upholstered with Alcantara",
+      "Designed for All-day Comfort",
+      "Built-in Lumbar Arch"
+    ],
+    "FreeShipping": false,
+    "idBrand": 2,
+    "idCategory": 7,
+    "discount": true,
+    "img": {
+      "alt": "Razer Enki Pro",
+      "src": "assets/img/razerChair.png"
+    }
+  },
+  {
+    "id": 5,
+    "naziv": "Razer Kiyo Pro Ultra",
+    "cena": {
+      "staraCena": 299.99,
+      "aktuelnaCena": 349.99
+    },
+    "Karakteristike": [
+      "DSLR-like 4K Quality",
+      "Incredible Clarity in Any Light",
+      "AI-powered Video Imaging"
+    ],
+    "FreeShipping": false,
+    "idBrand": 2,
+    "idCategory": 5,
+    "discount": true,
+    "img": {
+      "alt": "Razer Kiyo Pro Ultra",
+      "src": "assets/img/razerWebcam.png"
+    }
+  },
+  {
+    "id": 6,
+    "naziv": "Razer Edge Wi-Fi",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 399.99
+    },
+    "Karakteristike": [
+      "Snapdragon® G3X Gen 1",
+      "Console-class Control with HyperSense",
+      "6.8” 144Hz AMOLED™ FHD+ Touchscreen"
+    ],
+    "FreeShipping": true,
+    "idCategory": 8,
+    "idBrand": 2,
+    "discount": false,
+    "img": {
+      "alt": "Razer Edge Wi-Fi",
+      "src": "assets/img/razerEdge.png"
+    }
+  },
+  {
+    "id": 7,
+    "naziv": "FLOW",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 119.99
+    },
+    "Karakteristike": [
+      "5 W (RMS) Power",
+      "In-line controles",
+      "RGB illumination"
+    ],
+    "FreeShipping": false,
+    "idBrand": 3,
+    "idCategory": 6,
+    "discount": false,
+    "img": {
+      "alt": "FLOW",
+      "src": "assets/img/flow.png"
+    }
+  },
+  {
+    "id": 8,
+    "naziv": "Wirless speaker",
+    "cena": {
+      "staraCena": 76.99,
+      "aktuelnaCena": 112.99
+    },
+    "Karakteristike": [
+      "TWS function - True Wireless Stereo",
+      "10 W RMS",
+      "Bluetooth 5.0"
+    ],
+    "FreeShipping": false,
+    "idBrand": 3,
+    "idCategory": 6,
+    "discount": true,
+    "img": {
+      "alt": "Wirless speaker",
+      "src": "assets/img/wirlessSpeaker.png"
+    }
+  },
+  {
+    "id": 9,
+    "naziv": "WOLF",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 69.99
+    },
+    "Karakteristike": [
+      "High-precision 50 mm speakers",
+      "Frequency range: 20Hz - 20kHz",
+      "Interface: USB 2.0"
+    ],
+    "FreeShipping": false,
+    "idBrand": 3,
+    "idCategory": 3,
+    "discount": false,
+    "img": {
+      "alt": "WOLF",
+      "src": "assets/img/wolf.png"
+    }
+  },
+  {
+    "id": 10,
+    "naziv": "Rampage backpack",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 66.99
+    },
+    "Karakteristike": [
+      "Exterior：100% polyester fibre",
+      "Interior：10% velboa, 90% polyester fibre",
+      "Gray color"
+    ],
+    "FreeShipping": false,
+    "idBrand": 4,
+    "idCategory": 10,
+    "discount": false,
+    "img": {
+      "alt": "Rampage backpack",
+      "src": "assets/img/backpack.png"
+    }
+  },
+  {
+    "id": 11,
+    "naziv": "Addison Rampage",
+    "cena": {
+      "staraCena": 65.99,
+      "aktuelnaCena": 39.99
+    },
+    "Karakteristike": [
+      "Military-grade fabric for exceptional speed",
+      "Every Detail Matters – Stitched flag & silver logo",
+      "Available in 2 sizes – Square & XXL"
+    ],
+    "FreeShipping": false,
+    "idBrand": 4,
+    "idCategory": 11,
+    "discount": true,
+    "img": {
+      "alt": "Addison Rampage",
+      "src": "assets/img/rampageMousePad.png"
+    }
+  },
+  {
+    "id": 12,
+    "naziv": "Rampage SMX-R22",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 45.99
+    },
+    "Karakteristike": ["4800 DPI ", "10 million keystrokes", "USB 2.0"],
+    "FreeShipping": false,
+    "idBrand": 4,
+    "idCategory": 1,
+    "discount": false,
+    "img": {
+      "alt": "Rampage SMX-R22",
+      "src": "assets/img/rampage.png"
+    }
+  },
+  {
+    "id": 13,
+    "naziv": "Redragon K530 Combo 3+",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 112.99
+    },
+    "Karakteristike": [
+      "Award Winning Design",
+      "100 million keystroke life-cycle",
+      "32-bit ARM Cortex-M0 based processor"
+    ],
+    "FreeShipping": true,
+    "idBrand": 5,
+    "idCategory": [1, 2, 3],
+    "discount": false,
+    "img": {
+      "alt": "Redragon K530",
+      "src": "assets/img/combo4.webp"
+    }
+  },
+  {
+    "id": 14,
+    "naziv": "Redragon K530 Combo 2+",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 112.99
+    },
+    "Karakteristike": [
+      "Award Winning Design",
+      "100 million keystroke life-cycle",
+      "32-bit ARM Cortex-M0 based processor"
+    ],
+    "FreeShipping": true,
+    "idBrand": 5,
+    "idCategory": [1, 2],
+    "discount": false,
+    "img": {
+      "alt": "Redragon K530",
+      "src": "assets/img/combo2.webp"
+    }
+  },
+  {
+    "id": 15,
+    "naziv": "Redragon K585 One-handed",
+    "cena": {
+      "staraCena": 222.99,
+      "aktuelnaCena": 160.99
+    },
+    "Karakteristike": [
+      "5-zone, 10-LED 16,8m color RGBA backlighting",
+      "Semi-transparent top plate",
+      "Solid and responsive typing with silent membrane keys"
+    ],
+    "FreeShipping": false,
+    "idBrand": 5,
+    "idCategory": [1, 2],
+    "discount": true,
+    "img": {
+      "alt": "Redragon K585 One-handed",
+      "src": "assets/img/combo3.webp"
+    }
+  },
+  {
+    "id": 16,
+    "naziv": "Redragon G809 JUPITER",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 139.99
+    },
+    "Karakteristike": [
+      "With RGB LED color channel instructions",
+      "Supports dual-point capacitive sensing touchpad",
+      "Supports double motor vibration"
+    ],
+    "FreeShipping": false,
+    "idBrand": 5,
+    "idCategory": 4,
+    "discount": false,
+    "img": {
+      "alt": "Redragon G809 JUPITER",
+      "src": "assets/img/redragon3.webp"
+    }
+  },
+  {
+    "id": 17,
+    "naziv": "Redragon H350 Pandora",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 129.99
+    },
+    "Karakteristike": [
+      "Cross Platform Compatibility",
+      "Precision-tuned 50mm neodymium drivers",
+      "Leatherette headband with foam cushioning"
+    ],
+    "FreeShipping": false,
+    "idBrand": 5,
+    "idCategory": 3,
+    "discount": false,
+    "img": {
+      "alt": "Redragon H350 Pandora",
+      "src": "assets/img/reddragon1.webp"
+    }
+  },
+  {
+    "id": 18,
+    "naziv": "Redragon H510 Zeus Wired",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 109.99
+    },
+    "Karakteristike": [
+      "Self-adjusting metal headband",
+      "Removable unidirectional microphone",
+      "TruSpeak™ microphone technology"
+    ],
+    "FreeShipping": true,
+    "idBrand": 5,
+    "idCategory": 3,
+    "discount": false,
+    "img": {
+      "alt": "Redragon H510 Zeus Wired",
+      "src": "assets/img/redragon2.webp"
+    }
+  },
+  {
+    "id": 19,
+    "naziv": "Redragon GW910 1080P",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 69.99
+    },
+    "Karakteristike": [
+      "Integrated microphone",
+      "Adjustable clip/stand",
+      "Video Call Quick Launch"
+    ],
+    "FreeShipping": false,
+    "idBrand": 5,
+    "idCategory": 5,
+    "discount": false,
+    "img": {
+      "alt": "Redragon GW910 1080P",
+      "src": "assets/img/webcamRedragon.webp"
+    }
+  },
+  {
+    "id": 20,
+    "naziv": "Redragon K617 FIZZ",
+    "cena": {
+      "staraCena": 99.99,
+      "aktuelnaCena": 69.99
+    },
+    "Karakteristike": [
+      "Integrated microphone",
+      "Adjustable clip/stand",
+      "Video Call Quick Launch"
+    ],
+    "FreeShipping": false,
+    "idBrand": 5,
+    "idCategory": 2,
+    "discount": true,
+    "img": {
+      "alt": "Redragon K617 FIZZ",
+      "src": "assets/img/keyboardRedragon.webp"
+    }
+  },
+  {
+    "id": 21,
+    "naziv": "Fantech headphone stand",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 39.99
+    },
+    "Karakteristike": [
+      "Solid Metallic Design",
+      "Stable Headset Hanger",
+      "Sturdy Cell Phone Holder"
+    ],
+    "FreeShipping": false,
+    "idBrand": 6,
+    "idCategory": 12,
+    "discount": false,
+    "img": {
+      "alt": "Fantech headphone stand",
+      "src": "assets/img/fantech1.png"
+    }
+  },
+  {
+    "id": 22,
+    "naziv": "Fantech headphone stand",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 39.99
+    },
+    "Karakteristike": [
+      "Solid Metallic Design",
+      "Stable Headset Hanger",
+      "Sturdy Cell Phone Holder"
+    ],
+    "FreeShipping": false,
+    "idBrand": 6,
+    "idCategory": 12,
+    "discount": false,
+    "img": {
+      "alt": "Fantech headphone stand",
+      "src": "assets/img/2fantech1.png"
+    }
+  },
+  {
+    "id": 23,
+    "naziv": "Scorpion K8",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 69.99
+    },
+    "Karakteristike": [
+      "Metal base edition",
+      "19 anit ghost key",
+      "Programmable function Key"
+    ],
+    "FreeShipping": false,
+    "idBrand": 7,
+    "idCategory": 2,
+    "discount": false,
+    "img": {
+      "alt": "Scorpion K8",
+      "src": "assets/img/genousKeyboard.png"
+    }
+  },
+  {
+    "id": 24,
+    "naziv": "Ammox-X1-600",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 69.99
+    },
+    "Karakteristike": [
+      "Comfort & precision at your hand",
+      "1Ergonomic design",
+      "10 Million clicks"
+    ],
+    "FreeShipping": true,
+    "idBrand": 7,
+    "idCategory": 1,
+    "discount": false,
+    "img": {
+      "alt": "Ammox-X1-600",
+      "src": "assets/img/geniusMice.png"
+    }
+  },
+  {
+    "id": 25,
+    "naziv": "Fanceth cooler",
+    "cena": {
+      "staraCena": false,
+      "aktuelnaCena": 49.99
+    },
+    "Karakteristike": ["100 mm fan", "TDP: 95W", "ARGB outer ring"],
+    "FreeShipping": true,
+    "idBrand": 6,
+    "idCategory": 13,
+    "discount": false,
+    "img": {
+      "alt": "Fanceth cooler",
+      "src": "assets/img/fantechKuler.png"
+    }
+  }
+]
