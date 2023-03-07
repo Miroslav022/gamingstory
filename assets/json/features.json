@@ -1,0 +1,34 @@
+[
+  {
+    "naziv": "Fast delivery",
+    "description": "Fast delivery in all territories",
+    "img": {
+      "src": "fast-delivery.png",
+      "alt": "delivery"
+    }
+  },
+  {
+    "naziv": "Online support",
+    "description": "Support Online 24hrs a day",
+    "img": {
+      "src": "target.png",
+      "alt": "support"
+    }
+  },
+  {
+    "naziv": "Money return",
+    "description": "Back quarante under 7 days",
+    "img": {
+      "src": "return-on-investment.png",
+      "alt": "return money"
+    }
+  },
+  {
+    "naziv": "Member discount",
+    "description": "On every order over 120.00$",
+    "img": {
+      "src": "member-card.png",
+      "alt": "discount"
+    }
+  }
+]

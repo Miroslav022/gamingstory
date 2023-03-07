@@ -1,0 +1,18 @@
+[
+  {
+    "vrednost": "naziv-rastuce",
+    "naziv": "Name ascending"
+  },
+  {
+    "vrednost": "naziv-opadajuce",
+    "naziv": "Name descending"
+  },
+  {
+    "vrednost": "cena-rastuce",
+    "naziv": "Price ascending"
+  },
+  {
+    "vrednost": "cena-opadajuce",
+    "naziv": "Price descending"
+  }
+]
