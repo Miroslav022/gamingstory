@@ -39,6 +39,7 @@ let moveRight = document.querySelector(".block-right");
 let moveLeft = document.querySelector(".block-left");
 let filterBtn = document.querySelector(".filter-icon-block");
 let closeFilter = document.querySelector(".close-btn");
+let backToTop = document.querySelector(".backToTop");
 
 let discountCb = document.querySelector("#discountElement");
 let freeShippCb = document.querySelector("#shippingCb");
@@ -473,6 +474,11 @@ window.addEventListener("load", function () {
     }
     updateCart();
   } else if (window.location.pathname.includes("shop.html")) {
+    //back To top
+    backToTop.addEventListener("click", function () {
+      document.documentElement.scrollTop = 0;
+    });
+
     //Proizvodi
     let proizvodi = lsGet("proizvodi");
     //Ajax
@@ -512,7 +518,7 @@ window.addEventListener("load", function () {
       );
       ispisProizvoda(searchedProducts);
     });
-    this.document.querySelector("#forma").addEventListener("submit", (e) => {
+    document.querySelector("#forma").addEventListener("submit", (e) => {
       e.preventDefault();
     });
 
