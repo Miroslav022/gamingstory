@@ -103,7 +103,10 @@ function atcHome(el) {
   let product = el.target.closest(".b-seller");
   let productId = product.getAttribute("id");
   let productsFromCart = lsGet("korpa");
-
+  atcPopUp.classList.remove("hiddenPopUp");
+  setTimeout(function () {
+    atcPopUp.classList.add("hiddenPopUp");
+  }, 2000);
   if (productsFromCart == null) {
     let cart = [
       {
@@ -583,6 +586,7 @@ window.addEventListener("load", function () {
             let id = e.target.getAttribute("name");
             if (e.target.checked) {
               cekiraniCat.push(id);
+              console.log(cekiraniCat);
             } else {
               cekiraniCat = cekiraniCat.filter((x) => x != id);
             }
@@ -613,7 +617,6 @@ window.addEventListener("load", function () {
       proizvodi = FiltriranjeProizvoda(proizvodi, "shipping", cekiraniShipping);
       proizvodi = FiltriranjeProizvoda(proizvodi, "range", proizvodiPoCeni);
       proizvodi = sortiranjeProizvoda(proizvodi);
-      console.log(proizvodi);
       ispisProizvoda(proizvodi);
     }
 
@@ -781,7 +784,7 @@ window.addEventListener("load", function () {
     updateCart();
 
     //Show all products
-    let cart = lsGet("korpa");
+    let cart = lsGet("korpa") == null ? [] : lsGet("korpa");
     ispisProizvodaIzKorpe(cart);
 
     //DDL for expiry date
@@ -892,8 +895,13 @@ window.addEventListener("load", function () {
       validateBox("#terms", "Please accept Terms of Use & Privacy Policy");
       if (brojGresaka == 0) {
         localStorage.removeItem("korpa");
+        subTotalBlock.innerHTML = `0.00$`;
         productCt.innerHTML = "";
         messageBox.innerHTML = `<p>Successful purchase!</p>`;
+        document.querySelectorAll("input").forEach((e) => {
+          e.value = "";
+        });
+
         messageBox.classList.remove("hidden");
         setTimeout(function () {
           messageBox.classList.add("hidden");
