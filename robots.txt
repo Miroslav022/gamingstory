@@ -1,0 +1,5 @@
+User-agent:*
+Disallow:/assets/img/untitled-1.txt
+
+User-agent:Google
+Disallow:/assets/admin/admin.txt
