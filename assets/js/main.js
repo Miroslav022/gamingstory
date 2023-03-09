@@ -908,6 +908,7 @@ window.addEventListener("load", function () {
           e.value = "";
         });
 
+        overlayPayment.classList.add("overlay-checkout");
         messageBox.classList.remove("hidden");
         setTimeout(function () {
           messageBox.classList.add("hidden");
