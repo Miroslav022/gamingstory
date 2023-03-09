@@ -410,7 +410,7 @@ window.addEventListener("load", function () {
                   <span class="price">${bs.cena.aktuelnaCena}$</span>
                 </div>
                 <div class="down">
-                  <div class="cart">
+                  <div class="cart atchome">
                   <div class="icon">
                   <svg
                     width="24px"
@@ -439,7 +439,7 @@ window.addEventListener("load", function () {
               </div>
             </div>`;
       });
-      let atCart = document.querySelectorAll(".icon");
+      let atCart = document.querySelectorAll(".atchome");
       atCart.forEach((el) => {
         el.addEventListener("click", (e) => {
           atcHome(e);
