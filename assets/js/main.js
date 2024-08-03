@@ -1153,25 +1153,5 @@ window.addEventListener("load", function () {
       subTotalBlock.innerHTML = `${sum.toFixed(2)}$`;
     }
     subTotal();
-  } else if (this.window.location.pathname.includes("author.html")) {
-    let hamburger = document.querySelector(".menu-btn");
-    let sideMenu = document.querySelector(".side-menu");
-    hamburger.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      if (hamburger.classList.contains("open")) {
-        hamburger.classList.remove("open");
-        sideMenu.classList.add("none");
-      } else {
-        hamburger.classList.add("open");
-        sideMenu.classList.remove("none");
-      }
-    });
-
-    //Navigacija
-    getNavigation();
-
-    //Update cart
-    updateCart();
-  }
+  } 
 });
